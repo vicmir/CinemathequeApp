@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-between">
+  <h2>Movies</h2>
+  <button class="btn btn-dark" [routerLink]="['add-movie']">Add new movie</button>
+</div>
+<div class="mt-4 table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{ movie.id }}</td>
+        <td>{{ movie.name }}</td>
+        <td>{{ movie.type }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
